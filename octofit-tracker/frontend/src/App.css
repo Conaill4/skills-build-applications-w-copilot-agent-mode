@@ -1,0 +1,151 @@
+.app-shell {
+  min-height: 100svh;
+  padding: 32px;
+}
+
+.app-header {
+  align-items: center;
+  background: linear-gradient(135deg, #f8fafc 0%, #e9f7f1 52%, #fff7e0 100%);
+  border: 1px solid #d7e4dd;
+  border-radius: 8px;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.brand-lockup {
+  align-items: center;
+  display: flex;
+  gap: 18px;
+  text-align: left;
+}
+
+.brand-lockup img {
+  height: 72px;
+  width: 72px;
+}
+
+.eyebrow {
+  color: #0f766e;
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.api-pill {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid #d7e4dd;
+  border-radius: 8px;
+  display: grid;
+  gap: 6px;
+  max-width: 460px;
+  padding: 12px 14px;
+  text-align: left;
+}
+
+.api-pill span {
+  color: #475569;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.section-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.section-tabs a {
+  background: #ffffff;
+  border: 1px solid #d7e4dd;
+  border-radius: 8px;
+  color: #1f2937;
+  font-weight: 700;
+  padding: 10px 14px;
+  text-decoration: none;
+}
+
+.section-tabs a.active {
+  background: #0f766e;
+  border-color: #0f766e;
+  color: #ffffff;
+}
+
+.content-panel {
+  background: #ffffff;
+  border: 1px solid #d7e4dd;
+  border-radius: 8px;
+  min-height: 420px;
+  padding: 24px;
+}
+
+.data-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.data-card,
+.ranking-row {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 18px;
+  text-align: left;
+}
+
+.data-card h2,
+.ranking-row h2 {
+  margin: 8px 0;
+}
+
+.meta,
+.status-copy {
+  color: #64748b;
+}
+
+.ranking-list {
+  display: grid;
+  gap: 12px;
+}
+
+.ranking-row {
+  align-items: center;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 64px 1fr auto;
+}
+
+.ranking-row strong {
+  color: #0f766e;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    padding: 16px;
+  }
+
+  .app-header,
+  .brand-lockup {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .api-pill {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .api-pill code {
+    overflow-wrap: anywhere;
+  }
+
+  .ranking-row {
+    grid-template-columns: 1fr;
+  }
+}

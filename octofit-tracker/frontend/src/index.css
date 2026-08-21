@@ -1,0 +1,57 @@
+:root {
+  --font-body: Avenir, "Gill Sans", "Trebuchet MS", sans-serif;
+  --font-heading: Georgia, "Times New Roman", serif;
+
+  color: #1f2937;
+  background: #edf4ef;
+  font: 16px/1.5 var(--font-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  color: #111827;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+code {
+  color: #0f766e;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.82rem;
+}
+
+#root {
+  min-height: 100svh;
+}
