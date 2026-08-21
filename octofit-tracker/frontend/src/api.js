@@ -28,8 +28,11 @@ export function getCollection(payload, collectionName) {
   return []
 }
 
-export async function fetchCollection(collectionName) {
-  const response = await fetch(`${apiBaseUrl}/${collectionName}/`)
+export async function fetchCollection(endpointOrCollection, collectionName = endpointOrCollection) {
+  const endpoint = endpointOrCollection.startsWith('http')
+    ? endpointOrCollection
+    : `${apiBaseUrl}/${endpointOrCollection}/`
+  const response = await fetch(endpoint)
 
   if (!response.ok) {
     throw new Error(`Request failed with status ${response.status}`)

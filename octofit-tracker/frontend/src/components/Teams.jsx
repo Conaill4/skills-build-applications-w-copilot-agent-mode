@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react'
 
 import { fetchCollection } from '../api.js'
 
+const teamsEndpoint = import.meta.env.VITE_CODESPACE_NAME
+  ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/teams/`
+  : 'http://localhost:8000/api/teams/'
+
 function Teams() {
   const [teams, setTeams] = useState([])
   const [status, setStatus] = useState('loading')
@@ -9,7 +13,7 @@ function Teams() {
   useEffect(() => {
     let isMounted = true
 
-    fetchCollection('teams')
+    fetchCollection(teamsEndpoint, 'teams')
       .then((records) => {
         if (isMounted) {
           setTeams(records)
